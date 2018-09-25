@@ -6,7 +6,9 @@
         // 列表模板
         function index ()
         {
-            view("user/index");
+            // echo $_GET['name'];
+            echo 1;die;
+            // view("user/index");
         }
 
         // 修改模板

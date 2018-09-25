@@ -43,5 +43,14 @@
 
             // 清空缓存区
             ob_clean();
-        }    
+        }   
+        
+        // 删除自动生成的 文件
+        function delLoad (){
+            $fileName = $_GET['name'];
+            $cname = ucfirst($fileName);
+
+            unlink(ROOT . "controllers/{$cname}Controller.php");
+            unlink(ROOT . "models/{$fileName}.php");
+        }
     }
